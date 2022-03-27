@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* nav code modified from briancodex, 'html-css-js-website-smooth-scroll', 2020 [source code] https://github.com/briancodex/html-css-js-website-smooth-scroll#readme */
+
+.navbar {
+  background: #202020;
+  height: 80px;
+  display: flex;
+  font-size: 22px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.navbar__links:hover {
+  color: #B4F8C8;
+  transition: all 0.3s ease;
+}
+
+/* Tablet navigation bar code modified from briancodex, 'html-css-js-website-smooth-scroll', 2020 [source code] https://github.com/briancodex/html-css-js-website-smooth-scroll#readme */
+
+@media screen and (max-width: 960px) {
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -999px;
+    opacity: 1;
+  }
+
+  .navbar__menu.active {
+    background: #202020;
+    top: 100%;
+    opacity: 1;
+    height: 60vh;
+    font-size: 30px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+/* Home code modified from briancodex, 'html-css-js-website-smooth-scroll', 2020 [source code] https://github.com/briancodex/html-css-js-website-smooth-scroll#readme */
+.home {
+  background: #000000;
+  padding: 200px 0;
+}
+
+.home__heading {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.home__description {
+  font-size: 40px;
+}
+
+/* Who am I */
+.who {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+.meparagraph {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Montserrat";
+  font-style: oblique;
+  font-weight: bold;
+  color: Black;
+}
+
+.meeee {
+  float: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+
+/* Videos */
+.video-section {
+  background-color: #CBC3E3;
+}
+
+
+
+/* FAQ */
+
+.dark-blue {
+  background-color: #141E27;
+  color: #fff;
+}
+
+.container-fluid {
+  padding: 8% 10%;
+}
+
+.Header {
+  font-family: "Montserrat-Black";
+  font-size: 50px;
+  line-height: 1.67;
+  margin-top: 20px;
+}
+
+/* pricing code modified from practicalcodeacademy, 'pricing-table', 2020 [source code] https://github.com/PracticalCodeAcademy/pricing-table */
+ul {
+  list-style: none;
+}
+
+.container {
+  text-align: center;
+  width: 1450px;
+  height: 20%;
+  margin-left: 200px;
+  margin-bottom: 150px;
+  margin-top: 125px;
+}
+
+.toggle-switch{
+    display: flex;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.toggler{
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: #bc1e4a;
+    border-radius: 25px;
+    margin: 0 16px;
+    position: relative;
+}
+
+.toggler::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right:4px;
+}
+
+.toggler:checked:before{
+    right: 55%;
+}
+
+  .cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+   height: 550px;
+   width: 32%;
+   background-color: #900C3F;
+   border-radius: 15px;
+   padding: 15px;
+   text-align: center;
+   margin-left: 7px;
+   opacity: 95%;
+}
+
+.card-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: "Monserrat";
+}
+
+.cardprice{
+    font-size: 50px;
+    text-align: center;
+}
+
+.card-btn{
+    margin-top: 20px;
+    width: 100%;
+}
+
+#card-1 .card-btn:hover,
+#card-2 .card-btn:hover,
+#card-3 .card-btn:hover,
+.active .card-btn
+{
+    background-color: #bc1e4a;
+    cursor: pointer;
+}
+
+
+
+h2>span{
+    font-size: 15px;
+    font-family: "Monserrat";
+}
+
+.card-btn{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #bc1e4a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+#card-1 ul{
+    text-align: center;
+    font: 25px "Montserrat";
+    color: white;
+}
+
+#card-2 ul{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+#card-3 ul{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+#card-1 li{
+  font: 25px "Montserrat";
+}
+#card-2 li{
+  font: 25px "Montserrat";
+}
+#card-3 li{
+  font: 25px "Montserrat";
+}
+
+
+/* Footer */
+.container-fluid{
+  padding: 7% 15%;
+  margin-top: none;
+}
+.white-section {
+    background-color: #141E27;
+    color: #fff;
+  }
+}
